@@ -2,15 +2,29 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $bestellzettel from "./routes/bestellzettel.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $next from "./routes/next.tsx";
+import * as $preisliste from "./routes/preisliste.tsx";
+import * as $preisliste_getraenke from "./routes/preisliste_getraenke.tsx";
+import * as $wc from "./routes/wc.tsx";
+import * as $welcome from "./routes/welcome.tsx";
 
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
+    "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/bestellzettel.tsx": $bestellzettel,
     "./routes/index.tsx": $index,
+    "./routes/next.tsx": $next,
+    "./routes/preisliste.tsx": $preisliste,
+    "./routes/preisliste_getraenke.tsx": $preisliste_getraenke,
+    "./routes/wc.tsx": $wc,
+    "./routes/welcome.tsx": $welcome,
   },
   islands: {},
   baseUrl: import.meta.url,
