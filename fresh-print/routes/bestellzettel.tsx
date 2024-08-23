@@ -1,6 +1,8 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { JSX } from "preact";
-import { Pattern } from "../components/pattern.tsx";
+import { Head } from "$fresh/runtime.ts";
+import { Pages } from "../components/Pages.tsx";
+import { Page } from "../components/Page.tsx";
 
 type Data = {
   offset: number;
@@ -31,17 +33,35 @@ function Part(props: { n: number }): JSX.Element {
   );
 }
 
-export default function Home({ data }: PageProps<Data>) {
-  const range = [...Array(10).keys()].map((i) => i + data.offset);
+function OnePage(props: { offset: number }): JSX.Element {
+  const range = [...Array(10).keys()].map((i) => i + props.offset);
   return (
-    <div class="hoch">
-      <Pattern />
+    <Page>
       <div
         class="every-row every-column"
-        style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, 1fr);"
+        style="padding: 15px; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, 1fr);"
       >
         {range.map((n) => <Part n={n} />)}
       </div>
-    </div>
+    </Page>
+  );
+}
+
+export default function Home({ data }: PageProps<Data>) {
+  const untilNumber = 200;
+  const entriesPerPage = 10;
+  const numOfPages = Math.ceil(untilNumber / entriesPerPage);
+  const pagesRange = [...Array(numOfPages).keys()];
+  return (
+    <>
+      <Head>
+        <title>Preisliste</title>
+      </Head>
+      <Pages orientation="portrait">
+        {pagesRange.map((page) => (
+          <OnePage offset={data.offset + (entriesPerPage * page)} />
+        ))}
+      </Pages>
+    </>
   );
 }
