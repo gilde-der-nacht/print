@@ -55,7 +55,7 @@ export default function Home({ data }: PageProps<Data>): JSX.Element {
   return (
     <>
       <Head>
-        <title>Preisliste</title>
+        <title>Bestellzettel</title>
       </Head>
       <Pages orientation="portrait">
         {pagesRange.map((page) => (

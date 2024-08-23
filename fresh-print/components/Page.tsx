@@ -13,3 +13,18 @@ export function Page(
     </div>
   );
 }
+
+export function HalfPage(
+  props: {
+    side: "left" | "right";
+    logo?: boolean;
+    children: ComponentChildren;
+  },
+): JSX.Element {
+  return (
+    <div class={`subpage ${props.side}`}>
+      {props.children}
+      {props.logo !== false ? <Logo small={true} /> : null}
+    </div>
+  );
+}
