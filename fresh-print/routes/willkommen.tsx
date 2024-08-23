@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Nächstes Jahr</title>
+        <title>Willkommen</title>
       </Head>
       <Pages orientation="landscape">
         <Page>
