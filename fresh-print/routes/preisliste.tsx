@@ -1,6 +1,5 @@
-import { JSX } from "preact";
+import type { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
-import { Logo } from "../components/Logo.tsx";
 import { Page } from "../components/Page.tsx";
 import { Pages } from "../components/Pages.tsx";
 
@@ -12,10 +11,7 @@ export default function Home(): JSX.Element {
       </Head>
       <Pages orientation="portrait">
         <Page>
-          <div
-            class="every-column"
-            style="grid-column-start: 2; grid-row-start: 2;"
-          >
+          <div>
             <h3>
               Verpflegung
             </h3>
@@ -23,7 +19,7 @@ export default function Home(): JSX.Element {
           </div>
           <div
             class="half-column bold"
-            style="font-size: 30px; grid-column-start: 2; grid-row-start: 4; display: grid; grid-template-columns: 1fr auto; gap: 4rem 1rem;"
+            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 4rem 1rem;"
           >
             <p>Snack</p>
             <p style="text-align: right">2</p>
@@ -47,13 +43,9 @@ export default function Home(): JSX.Element {
               <li>18 - 19 Uhr</li>
             </ul>
           </div>
-          <Logo />
         </Page>
-        <Page>
-          <div
-            class="every-column"
-            style="grid-column-start: 2; grid-row-start: 2;"
-          >
+        <Page logo={false}>
+          <div>
             <h3>
               Verpflegung
             </h3>
@@ -61,7 +53,7 @@ export default function Home(): JSX.Element {
           </div>
           <div
             class="half-column bold"
-            style="font-size: 30px; grid-column-start: 2; grid-row-start: 4; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 1rem;"
+            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 1rem;"
           >
             <p>Mineralwasser</p>
             <p style="text-align: right">3</p>

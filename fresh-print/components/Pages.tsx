@@ -1,4 +1,4 @@
-import { ComponentChildren, JSX } from "preact";
+import type { ComponentChildren, JSX } from "preact";
 
 type Props = {
   orientation: "portrait" | "landscape";

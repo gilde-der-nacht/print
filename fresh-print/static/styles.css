@@ -24,6 +24,24 @@ p {
   margin: 0;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+/* Colors */
+
+:root {
+  --clr-primary: hsl(272 46.8% 50.3%);
+  --clr-accent: hsl(358 69.4% 55.2%);
+}
+
 /* Layout */
 
 @page {
@@ -57,6 +75,11 @@ p {
   grid-template-columns: repeat(24, minmax(0, 1fr));
   grid-template-rows: repeat(24, minmax(0, 1fr));
   overflow: hidden;
+}
+
+.page>* {
+  grid-column: 2 / -2;
+  grid-row: 2 / -2;
 }
 
 @media print {
@@ -105,6 +128,15 @@ p {
   font-weight: bold;
 }
 
+.no-list {
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
 /* Logo */
 
 .logo {
@@ -147,4 +179,24 @@ p {
   width: 1em;
   border: 1px solid black;
   margin-right: .3rem;
+}
+
+/* Program */
+
+.box {
+  border: 4px solid var(--clr-accent);
+  padding: 10px;
+}
+
+.space-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.space {
+  border: 1px solid var(--clr-primary);
+  padding: 50px 10px 10px;
+  font-weight: bold;
+  font-size: smaller;
 }

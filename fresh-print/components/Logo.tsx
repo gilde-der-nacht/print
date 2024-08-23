@@ -1,4 +1,4 @@
-import { JSX } from "preact";
+import type { JSX } from "preact";
 import { RstLogo } from "./rst-logo.tsx";
 
 export function Logo(): JSX.Element {

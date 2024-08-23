@@ -1,5 +1,5 @@
-import { Handlers, PageProps } from "$fresh/server.ts";
-import { JSX } from "preact";
+import type { Handlers, PageProps } from "$fresh/server.ts";
+import type { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
 import { Pages } from "../components/Pages.tsx";
 import { Page } from "../components/Page.tsx";
@@ -36,7 +36,7 @@ function Part(props: { n: number }): JSX.Element {
 function OnePage(props: { offset: number }): JSX.Element {
   const range = [...Array(10).keys()].map((i) => i + props.offset);
   return (
-    <Page>
+    <Page logo={false}>
       <div
         class="every-row every-column"
         style="padding: 15px; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5, 1fr);"
@@ -47,7 +47,7 @@ function OnePage(props: { offset: number }): JSX.Element {
   );
 }
 
-export default function Home({ data }: PageProps<Data>) {
+export default function Home({ data }: PageProps<Data>): JSX.Element {
   const untilNumber = 200;
   const entriesPerPage = 10;
   const numOfPages = Math.ceil(untilNumber / entriesPerPage);

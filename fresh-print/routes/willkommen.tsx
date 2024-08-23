@@ -1,9 +1,9 @@
 import { Head } from "$fresh/runtime.ts";
-import { Logo } from "../components/Logo.tsx";
+import type { JSX } from "preact";
 import { Page } from "../components/Page.tsx";
 import { Pages } from "../components/Pages.tsx";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       <Head>
@@ -17,7 +17,6 @@ export default function Home() {
           >
             Herzlich willkommen
           </h1>
-          <Logo />
         </Page>
       </Pages>
     </>

@@ -1,6 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
+import type { JSX } from "preact";
 
-export default function Error404() {
+export default function Error404(): JSX.Element {
   return (
     <>
       <Head>

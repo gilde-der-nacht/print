@@ -29,6 +29,9 @@
     "$std/": "https://deno.land/std@0.216.0/"
   },
   "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   }
