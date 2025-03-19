@@ -23,6 +23,9 @@ export default function Home(): JSX.Element {
           <a href="/lst25/naechstesJahr">Nächstes Jahr</a>
         </li>
         <li>
+          <a href="/lst25/namenstafeln">Namenstafeln</a>
+        </li>
+        <li>
           <a href="/lst25/preisliste">Preisliste</a>
         </li>
         <li>
