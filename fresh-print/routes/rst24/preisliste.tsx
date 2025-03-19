@@ -1,7 +1,7 @@
 import type { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
-import { Page } from "../components/Page.tsx";
-import { Pages } from "../components/Pages.tsx";
+import { Page } from "#/components/Page.tsx";
+import { Pages } from "#/components/Pages.tsx";
 
 export default function Home(): JSX.Element {
   return (

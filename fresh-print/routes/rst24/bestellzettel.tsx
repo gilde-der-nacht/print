@@ -1,8 +1,8 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import type { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
-import { Pages } from "../components/Pages.tsx";
-import { Page } from "../components/Page.tsx";
+import { Pages } from "#/components/Pages.tsx";
+import { Page } from "#/components/Page.tsx";
 
 type Data = {
   offset: number;

@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import type { JSX } from "preact";
-import { HalfPage, Page } from "../components/Page.tsx";
-import { Pages } from "../components/Pages.tsx";
+import { HalfPage, Page } from "#/components/Page.tsx";
+import { Pages } from "#/components/Pages.tsx";
 
 function FeedbackPage(): JSX.Element {
   return (

@@ -4,14 +4,14 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $bestellzettel from "./routes/bestellzettel.tsx";
-import * as $discord from "./routes/discord.tsx";
-import * as $feedback from "./routes/feedback.tsx";
-import * as $naechstesJahr from "./routes/naechstesJahr.tsx";
-import * as $preisliste from "./routes/preisliste.tsx";
-import * as $programm from "./routes/programm.tsx";
-import * as $wc from "./routes/wc.tsx";
-import * as $willkommen from "./routes/willkommen.tsx";
+import * as $rst24_bestellzettel from "./routes/rst24/bestellzettel.tsx";
+import * as $rst24_discord from "./routes/rst24/discord.tsx";
+import * as $rst24_feedback from "./routes/rst24/feedback.tsx";
+import * as $rst24_naechstesJahr from "./routes/rst24/naechstesJahr.tsx";
+import * as $rst24_preisliste from "./routes/rst24/preisliste.tsx";
+import * as $rst24_programm from "./routes/rst24/programm.tsx";
+import * as $rst24_wc from "./routes/rst24/wc.tsx";
+import * as $rst24_willkommen from "./routes/rst24/willkommen.tsx";
 
 import type { Manifest } from "$fresh/server.ts";
 
@@ -19,14 +19,14 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/bestellzettel.tsx": $bestellzettel,
-    "./routes/discord.tsx": $discord,
-    "./routes/feedback.tsx": $feedback,
-    "./routes/naechstesJahr.tsx": $naechstesJahr,
-    "./routes/preisliste.tsx": $preisliste,
-    "./routes/programm.tsx": $programm,
-    "./routes/wc.tsx": $wc,
-    "./routes/willkommen.tsx": $willkommen,
+    "./routes/rst24/bestellzettel.tsx": $rst24_bestellzettel,
+    "./routes/rst24/discord.tsx": $rst24_discord,
+    "./routes/rst24/feedback.tsx": $rst24_feedback,
+    "./routes/rst24/naechstesJahr.tsx": $rst24_naechstesJahr,
+    "./routes/rst24/preisliste.tsx": $rst24_preisliste,
+    "./routes/rst24/programm.tsx": $rst24_programm,
+    "./routes/rst24/wc.tsx": $rst24_wc,
+    "./routes/rst24/willkommen.tsx": $rst24_willkommen,
   },
   islands: {},
   baseUrl: import.meta.url,
