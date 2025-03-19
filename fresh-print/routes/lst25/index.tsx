@@ -38,6 +38,9 @@ export default function Home(): JSX.Element {
           <a href="/lst25/wc">WC</a>
         </li>
         <li>
+          <a href="/lst25/wegweiser">Wegweiser</a>
+        </li>
+        <li>
           <a href="/lst25/willkommen">Willkommen</a>
         </li>
       </ul>
