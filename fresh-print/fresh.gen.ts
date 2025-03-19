@@ -4,9 +4,11 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $index from "./routes/index.tsx";
 import * as $rst24_bestellzettel from "./routes/rst24/bestellzettel.tsx";
 import * as $rst24_discord from "./routes/rst24/discord.tsx";
 import * as $rst24_feedback from "./routes/rst24/feedback.tsx";
+import * as $rst24_index from "./routes/rst24/index.tsx";
 import * as $rst24_naechstesJahr from "./routes/rst24/naechstesJahr.tsx";
 import * as $rst24_preisliste from "./routes/rst24/preisliste.tsx";
 import * as $rst24_programm from "./routes/rst24/programm.tsx";
@@ -19,9 +21,11 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/index.tsx": $index,
     "./routes/rst24/bestellzettel.tsx": $rst24_bestellzettel,
     "./routes/rst24/discord.tsx": $rst24_discord,
     "./routes/rst24/feedback.tsx": $rst24_feedback,
+    "./routes/rst24/index.tsx": $rst24_index,
     "./routes/rst24/naechstesJahr.tsx": $rst24_naechstesJahr,
     "./routes/rst24/preisliste.tsx": $rst24_preisliste,
     "./routes/rst24/programm.tsx": $rst24_programm,
