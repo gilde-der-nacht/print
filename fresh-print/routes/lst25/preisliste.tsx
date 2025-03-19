@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
         <title>Preisliste</title>
       </Head>
       <Pages orientation="portrait">
-        <Page event="RST" year={2024}>
+        <Page event="LST" year={2025}>
           <div>
             <h3>
               Verpflegung
@@ -23,12 +23,12 @@ export default function Home(): JSX.Element {
           >
             <p>Snack</p>
             <p style="text-align: right">2</p>
-            <p>Pilzrisotto</p>
-            <p style="text-align: right">15</p>
-            <p>Penne All'Arrabbiata</p>
-            <p style="text-align: right">15</p>
-            <p>Penne Pesto</p>
-            <p style="text-align: right">15</p>
+            <p>Lasagne</p>
+            <p style="text-align: right">99</p>
+            <p>vegetarische Lasagne</p>
+            <p style="text-align: right">99</p>
+            <p>Eintopf</p>
+            <p style="text-align: right">99</p>
           </div>
           <img
             src="/Twint-QR.jpg"
@@ -39,7 +39,7 @@ export default function Home(): JSX.Element {
               Warme Speisen können auf folgende Zeitfenster vorbestellt werden:
             </p>
             <ul>
-              <li>13 - 14 Uhr</li>
+              <li>12 - 13 Uhr</li>
               <li>18 - 19 Uhr</li>
             </ul>
           </div>

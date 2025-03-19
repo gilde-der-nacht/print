@@ -5,6 +5,15 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $lst25_bestellzettel from "./routes/lst25/bestellzettel.tsx";
+import * as $lst25_discord from "./routes/lst25/discord.tsx";
+import * as $lst25_feedback from "./routes/lst25/feedback.tsx";
+import * as $lst25_index from "./routes/lst25/index.tsx";
+import * as $lst25_naechstesJahr from "./routes/lst25/naechstesJahr.tsx";
+import * as $lst25_preisliste from "./routes/lst25/preisliste.tsx";
+import * as $lst25_programm from "./routes/lst25/programm.tsx";
+import * as $lst25_wc from "./routes/lst25/wc.tsx";
+import * as $lst25_willkommen from "./routes/lst25/willkommen.tsx";
 import * as $rst24_bestellzettel from "./routes/rst24/bestellzettel.tsx";
 import * as $rst24_discord from "./routes/rst24/discord.tsx";
 import * as $rst24_feedback from "./routes/rst24/feedback.tsx";
@@ -22,6 +31,15 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/index.tsx": $index,
+    "./routes/lst25/bestellzettel.tsx": $lst25_bestellzettel,
+    "./routes/lst25/discord.tsx": $lst25_discord,
+    "./routes/lst25/feedback.tsx": $lst25_feedback,
+    "./routes/lst25/index.tsx": $lst25_index,
+    "./routes/lst25/naechstesJahr.tsx": $lst25_naechstesJahr,
+    "./routes/lst25/preisliste.tsx": $lst25_preisliste,
+    "./routes/lst25/programm.tsx": $lst25_programm,
+    "./routes/lst25/wc.tsx": $lst25_wc,
+    "./routes/lst25/willkommen.tsx": $lst25_willkommen,
     "./routes/rst24/bestellzettel.tsx": $rst24_bestellzettel,
     "./routes/rst24/discord.tsx": $rst24_discord,
     "./routes/rst24/feedback.tsx": $rst24_feedback,

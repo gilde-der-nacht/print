@@ -14,7 +14,7 @@
           buildInputs = with pkgs; [
             deno
             emmet-ls
-
+            vscode-langservers-extracted
           ];
         };
       }

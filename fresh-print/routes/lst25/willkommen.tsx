@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
         <title>Willkommen</title>
       </Head>
       <Pages orientation="landscape">
-        <Page event="RST" year={2024}>
+        <Page event="LST" year={2025}>
           <h1
             class="h-center every-column"
             style="font-size: 100px; grid-row-start: 7;"

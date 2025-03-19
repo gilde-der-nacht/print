@@ -125,7 +125,7 @@ function ProgramSlot(props: { entry: GameRound }): JSX.Element {
   });
 
   return (
-    <Page event="RST" year={2024}>
+    <Page event="LST" year={2025}>
       <div style="grid-column-end: 18;">
         {entry.title === null ? <h1>{entry.system}</h1> : (
           <>

@@ -6,7 +6,7 @@ import { Pages } from "#/components/Pages.tsx";
 function FeedbackPage(): JSX.Element {
   return (
     <Page logo={false}>
-      <HalfPage side="left" event="RST" year={2024}>
+      <HalfPage side="left" event="LST" year={2025}>
         <h2>Feedback</h2>
         <div style="grid-row-start: 5;">
           <p class="line">Vorname, Name</p>
@@ -41,7 +41,7 @@ function FeedbackPage(): JSX.Element {
           <p class="line"></p>
         </div>
       </HalfPage>
-      <HalfPage side="right" event="RST" year={2024}>
+      <HalfPage side="right" event="LST" year={2025}>
         <div style="grid-row-start: 5;">
           <p class="line">Wie hast du von den Rollenspieltagen erfahren?</p>
           <p class="line"></p>

@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
         <title>Discord</title>
       </Head>
       <Pages orientation="landscape">
-        <Page event="RST" year={2024}>
+        <Page event="LST" year={2025}>
           <div class="h-center" style="grid-row-start: 4;">
             <img
               src="/Discord-Logo.svg"
@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
             class="h-center"
             style="font-size: 60px; grid-row-start: 16; text-transform: lowercase;"
           >
-            rollenspieltage.ch/chat
+            spieltage.ch/chat
           </h1>
         </Page>
       </Pages>
