@@ -13,7 +13,7 @@ import * as $programm from "./routes/programm.tsx";
 import * as $wc from "./routes/wc.tsx";
 import * as $willkommen from "./routes/willkommen.tsx";
 
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
