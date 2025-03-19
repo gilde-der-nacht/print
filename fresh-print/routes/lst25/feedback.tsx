@@ -9,51 +9,50 @@ function FeedbackPage(): JSX.Element {
       <HalfPage side="left" event="LST" year={2025}>
         <h2>Feedback</h2>
         <div style="grid-row-start: 5;">
-          <p class="line">Vorname, Name</p>
-          <p class="line">E-Mail-Adresse</p>
-          <br />
-          <p class="feedback">
-            Kreuze die Optionen an, die auf dich zutreffen:
-          </p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px 20px; padding-top: 15px;">
-            <p class="checkbox reset small">
-              Spieler:in an den Rollenspieltagen
-            </p>
-            <p class="checkbox reset small">
-              Spielleiter:in an den Rollenspieltagen
-            </p>
-            <p class="checkbox reset small">
-              online angemeldet
-            </p>
-          </div>
-          <br />
-          <p class="line">
-            Was ist dein Eindruck vom Anmeldeprozess über die Webseite?
-          </p>
-          <p class="line"></p>
-          <p class="line"></p>
-          <p class="line"></p>
-          <p class="line"></p>
-          <p class="line">
-            Was würde dich motivieren in Zukunft eine Spielrunde zu leiten?
-          </p>
-          <p class="line"></p>
-          <p class="line"></p>
-        </div>
-      </HalfPage>
-      <HalfPage side="right" event="LST" year={2025}>
-        <div style="grid-row-start: 5;">
-          <p class="line">Wie hast du von den Rollenspieltagen erfahren?</p>
+          <p class="line">Wie hast du von den Spieltagen erfahren?</p>
           <p class="line"></p>
           <p class="line"></p>
           <p class="line">Dein Highlight?</p>
           <p class="line"></p>
           <p class="line"></p>
-          <p class="line">Wünsche für die nächsten Rollenspieltage 2025?</p>
+          <p class="line">
+            Wünsche für die nächsten Spieltage vom{" "}
+            <strong>14. + 15. März 2026</strong>?
+          </p>
           <p class="line"></p>
           <p class="line"></p>
+          <br />
+          <p class="line">Vorname, Name</p>
+          <p class="line">E-Mail-Adresse</p>
           <p class="checkbox reset feedback">
-            Schreibt mir wenn die Rollenspieltage 2025 wieder stattfinden.
+            Erinnert mich bitte an die nächsten Luzerner Spieltage.
+          </p>
+          <p class="checkbox reset feedback">
+            Sendet mir doch bitte eine einmalige E-Mail, mit mehr Infos über
+            eure Organisation und weitere Events.
+          </p>
+        </div>
+      </HalfPage>
+      <HalfPage side="right" event="LST" year={2025}>
+        <h2>Feedback</h2>
+        <div style="grid-row-start: 5;">
+          <p class="line">Wie hast du von den Spieltagen erfahren?</p>
+          <p class="line"></p>
+          <p class="line"></p>
+          <p class="line">Dein Highlight?</p>
+          <p class="line"></p>
+          <p class="line"></p>
+          <p class="line">
+            Wünsche für die nächsten Spieltage vom{" "}
+            <strong>14. + 15. März 2026</strong>?
+          </p>
+          <p class="line"></p>
+          <p class="line"></p>
+          <br />
+          <p class="line">Vorname, Name</p>
+          <p class="line">E-Mail-Adresse</p>
+          <p class="checkbox reset feedback">
+            Erinnert mich bitte an die nächsten Luzerner Spieltage.
           </p>
           <p class="checkbox reset feedback">
             Sendet mir doch bitte eine einmalige E-Mail, mit mehr Infos über
@@ -72,7 +71,6 @@ export default function Home(): JSX.Element {
         <title>Feedbackbogen</title>
       </Head>
       <Pages orientation="landscape">
-        <FeedbackPage />
         <FeedbackPage />
       </Pages>
     </>
