@@ -8,6 +8,7 @@ import * as $index from "./routes/index.tsx";
 import * as $lst25_bestellzettel from "./routes/lst25/bestellzettel.tsx";
 import * as $lst25_discord from "./routes/lst25/discord.tsx";
 import * as $lst25_feedback from "./routes/lst25/feedback.tsx";
+import * as $lst25_helferprotokoll from "./routes/lst25/helferprotokoll.tsx";
 import * as $lst25_index from "./routes/lst25/index.tsx";
 import * as $lst25_naechstesJahr from "./routes/lst25/naechstesJahr.tsx";
 import * as $lst25_namenstafeln from "./routes/lst25/namenstafeln.tsx";
@@ -37,6 +38,7 @@ const manifest = {
     "./routes/lst25/bestellzettel.tsx": $lst25_bestellzettel,
     "./routes/lst25/discord.tsx": $lst25_discord,
     "./routes/lst25/feedback.tsx": $lst25_feedback,
+    "./routes/lst25/helferprotokoll.tsx": $lst25_helferprotokoll,
     "./routes/lst25/index.tsx": $lst25_index,
     "./routes/lst25/naechstesJahr.tsx": $lst25_naechstesJahr,
     "./routes/lst25/namenstafeln.tsx": $lst25_namenstafeln,

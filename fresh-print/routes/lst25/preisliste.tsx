@@ -25,7 +25,9 @@ export default function Home(): JSX.Element {
             <p style="text-align: right">2</p>
             <p>Lasagne</p>
             <p style="text-align: right">99</p>
-            <p>vegetarische Lasagne</p>
+            <p>
+              vegetarische<br />Lasagne
+            </p>
             <p style="text-align: right">99</p>
             <p>Eintopf</p>
             <p style="text-align: right">99</p>
