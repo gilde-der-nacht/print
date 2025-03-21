@@ -20,6 +20,9 @@ export default function Home(): JSX.Element {
           <a href="/lst25/feedback">Feedback</a>
         </li>
         <li>
+          <a href="/lst25/haftungsausschluss">Haftungsausschluss</a>
+        </li>
+        <li>
           <a href="/lst25/helferprotokoll">Helferprotokoll</a>
         </li>
         <li>
