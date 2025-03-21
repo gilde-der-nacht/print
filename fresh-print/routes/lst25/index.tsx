@@ -38,6 +38,9 @@ export default function Home(): JSX.Element {
           <a href="/lst25/programm">Programm</a>
         </li>
         <li>
+          <a href="/lst25/rollenspiele">Rollenspiele</a>
+        </li>
+        <li>
           <a href="/lst25/rollenspieltage">Rollenspieltage</a>
         </li>
         <li>

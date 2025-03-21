@@ -15,6 +15,7 @@ import * as $lst25_naechstesJahr from "./routes/lst25/naechstesJahr.tsx";
 import * as $lst25_namenstafeln from "./routes/lst25/namenstafeln.tsx";
 import * as $lst25_preisliste from "./routes/lst25/preisliste.tsx";
 import * as $lst25_programm from "./routes/lst25/programm.tsx";
+import * as $lst25_rollenspiele from "./routes/lst25/rollenspiele.tsx";
 import * as $lst25_rollenspieltage from "./routes/lst25/rollenspieltage.tsx";
 import * as $lst25_wc from "./routes/lst25/wc.tsx";
 import * as $lst25_wegweiser from "./routes/lst25/wegweiser.tsx";
@@ -46,6 +47,7 @@ const manifest = {
     "./routes/lst25/namenstafeln.tsx": $lst25_namenstafeln,
     "./routes/lst25/preisliste.tsx": $lst25_preisliste,
     "./routes/lst25/programm.tsx": $lst25_programm,
+    "./routes/lst25/rollenspiele.tsx": $lst25_rollenspiele,
     "./routes/lst25/rollenspieltage.tsx": $lst25_rollenspieltage,
     "./routes/lst25/wc.tsx": $lst25_wc,
     "./routes/lst25/wegweiser.tsx": $lst25_wegweiser,
