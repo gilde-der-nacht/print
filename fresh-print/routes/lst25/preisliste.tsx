@@ -19,26 +19,44 @@ export default function Home(): JSX.Element {
           </div>
           <div
             class="half-column bold"
-            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 4rem 1rem;"
+            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 2rem 1rem;"
           >
             <p>Snack</p>
             <p style="text-align: right">2</p>
-            <p>Lasagne</p>
-            <p style="text-align: right">99</p>
             <p>
-              vegetarische<br />Lasagne
+              Chili Sin Carne
+              <br />
+              <em>
+                (klein, vegan)
+              </em>
             </p>
-            <p style="text-align: right">99</p>
-            <p>Eintopf</p>
-            <p style="text-align: right">99</p>
+            <p style="text-align: right">4</p>
+            <p>
+              Chili Con Carne
+              <br />
+              <em>(klein)</em>
+            </p>
+            <p style="text-align: right">5</p>
+
+            <p>
+              Spinatlasagne
+              <br />
+              <em>
+                (vegetarisch)
+              </em>
+            </p>
+            <p style="text-align: right">13</p>
+
+            <p>Lasagne</p>
+            <p style="text-align: right">15</p>
           </div>
           <img
             src="/Twint-QR.jpg"
             style="grid-row-start: 4; grid-column: 18 / span 6;"
           />
-          <div style="grid-row-start: 16; grid-column: 2 / span 12;">
+          <div style="grid-row-start: 17; grid-column: 2 / span 12;">
             <p>
-              Warme Speisen können auf folgende Zeitfenster vorbestellt werden:
+              Lasagnen können auf folgende Zeitfenster vorbestellt werden:
             </p>
             <ul>
               <li>12 - 13 Uhr</li>
