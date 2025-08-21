@@ -12,10 +12,13 @@ export default function Home(): JSX.Element {
       <h1>{title}</h1>
       <ul>
         <li>
-          <a href="/rst24">Luzerner Rollenspieltage 2024</a>
+          <a href="/rst25">Luzerner Rollenspieltage 2025</a>
         </li>
         <li>
           <a href="/lst25">Luzerner Spieltage 2025</a>
+        </li>
+        <li>
+          <a href="/rst24">Luzerner Rollenspieltage 2024</a>
         </li>
       </ul>
     </>

@@ -29,6 +29,15 @@ import * as $rst24_preisliste from "./routes/rst24/preisliste.tsx";
 import * as $rst24_programm from "./routes/rst24/programm.tsx";
 import * as $rst24_wc from "./routes/rst24/wc.tsx";
 import * as $rst24_willkommen from "./routes/rst24/willkommen.tsx";
+import * as $rst25_bestellzettel from "./routes/rst25/bestellzettel.tsx";
+import * as $rst25_discord from "./routes/rst25/discord.tsx";
+import * as $rst25_feedback from "./routes/rst25/feedback.tsx";
+import * as $rst25_index from "./routes/rst25/index.tsx";
+import * as $rst25_naechstesJahr from "./routes/rst25/naechstesJahr.tsx";
+import * as $rst25_preisliste from "./routes/rst25/preisliste.tsx";
+import * as $rst25_programm from "./routes/rst25/programm.tsx";
+import * as $rst25_wc from "./routes/rst25/wc.tsx";
+import * as $rst25_willkommen from "./routes/rst25/willkommen.tsx";
 
 import type { Manifest } from "$fresh/server.ts";
 
@@ -61,6 +70,15 @@ const manifest = {
     "./routes/rst24/programm.tsx": $rst24_programm,
     "./routes/rst24/wc.tsx": $rst24_wc,
     "./routes/rst24/willkommen.tsx": $rst24_willkommen,
+    "./routes/rst25/bestellzettel.tsx": $rst25_bestellzettel,
+    "./routes/rst25/discord.tsx": $rst25_discord,
+    "./routes/rst25/feedback.tsx": $rst25_feedback,
+    "./routes/rst25/index.tsx": $rst25_index,
+    "./routes/rst25/naechstesJahr.tsx": $rst25_naechstesJahr,
+    "./routes/rst25/preisliste.tsx": $rst25_preisliste,
+    "./routes/rst25/programm.tsx": $rst25_programm,
+    "./routes/rst25/wc.tsx": $rst25_wc,
+    "./routes/rst25/willkommen.tsx": $rst25_willkommen,
   },
   islands: {},
   baseUrl: import.meta.url,

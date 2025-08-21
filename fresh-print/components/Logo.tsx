@@ -39,6 +39,17 @@ export function Logo(
       };
     }
 
+    if (props.event === "RST" && props.year === 2025) {
+      return {
+        name: (
+          <>
+            Luzerner <br /> Rollenspieltage
+          </>
+        ),
+        date: "23. + 24. August 2025",
+      };
+    }
+
     throw new Error(`Wrong or missing event props: ${JSON.stringify(props)}}`);
   })();
 

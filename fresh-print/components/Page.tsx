@@ -40,7 +40,7 @@ export function HalfPage(
     <div class={`subpage ${props.side}`}>
       {props.children}
       {props.logo !== false
-        ? <Logo small={true} event={props.event} year={props.year} />
+        ? <Logo small event={props.event} year={props.year} />
         : null}
     </div>
   );
