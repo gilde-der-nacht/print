@@ -35,6 +35,7 @@ import * as $rst25_discord from "./routes/rst25/discord.tsx";
 import * as $rst25_feedback from "./routes/rst25/feedback.tsx";
 import * as $rst25_index from "./routes/rst25/index.tsx";
 import * as $rst25_naechstesJahr from "./routes/rst25/naechstesJahr.tsx";
+import * as $rst25_namenstafeln from "./routes/rst25/namenstafeln.tsx";
 import * as $rst25_preisliste from "./routes/rst25/preisliste.tsx";
 import * as $rst25_programm from "./routes/rst25/programm.tsx";
 import * as $rst25_wc from "./routes/rst25/wc.tsx";
@@ -77,6 +78,7 @@ const manifest = {
     "./routes/rst25/feedback.tsx": $rst25_feedback,
     "./routes/rst25/index.tsx": $rst25_index,
     "./routes/rst25/naechstesJahr.tsx": $rst25_naechstesJahr,
+    "./routes/rst25/namenstafeln.tsx": $rst25_namenstafeln,
     "./routes/rst25/preisliste.tsx": $rst25_preisliste,
     "./routes/rst25/programm.tsx": $rst25_programm,
     "./routes/rst25/wc.tsx": $rst25_wc,
