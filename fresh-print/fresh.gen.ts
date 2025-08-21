@@ -30,6 +30,7 @@ import * as $rst24_programm from "./routes/rst24/programm.tsx";
 import * as $rst24_wc from "./routes/rst24/wc.tsx";
 import * as $rst24_willkommen from "./routes/rst24/willkommen.tsx";
 import * as $rst25_bestellzettel from "./routes/rst25/bestellzettel.tsx";
+import * as $rst25_coc from "./routes/rst25/coc.tsx";
 import * as $rst25_discord from "./routes/rst25/discord.tsx";
 import * as $rst25_feedback from "./routes/rst25/feedback.tsx";
 import * as $rst25_index from "./routes/rst25/index.tsx";
@@ -71,6 +72,7 @@ const manifest = {
     "./routes/rst24/wc.tsx": $rst24_wc,
     "./routes/rst24/willkommen.tsx": $rst24_willkommen,
     "./routes/rst25/bestellzettel.tsx": $rst25_bestellzettel,
+    "./routes/rst25/coc.tsx": $rst25_coc,
     "./routes/rst25/discord.tsx": $rst25_discord,
     "./routes/rst25/feedback.tsx": $rst25_feedback,
     "./routes/rst25/index.tsx": $rst25_index,

@@ -29,6 +29,9 @@ export default function Home(): JSX.Element {
           <a href="/rst25/programm">Programm</a>
         </li>
         <li>
+          <a href="/rst25/coc">Verhaltenskodex</a>
+        </li>
+        <li>
           <a href="/rst25/wc">WC</a>
         </li>
         <li>

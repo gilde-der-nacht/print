@@ -215,7 +215,7 @@ function ProgramSlot(props: { entry: GameRound }): JSX.Element {
         Kategorien:{" "}
         <em>
           {entry.tagNames.map((tag) =>
-            (gameTags.find((t) => t.name === tag))!.label
+            (gameTags.find((t) => t.name === tag))?.label ?? ""
           ).join(
             ", ",
           )}

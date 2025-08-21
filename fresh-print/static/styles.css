@@ -257,3 +257,20 @@ h6 {
   padding-top: 20px;
   font-size: 13px;
 }
+
+/* Prose */
+
+.prose {
+  font-size: 3mm;
+  display: grid;
+  gap: .5rem;
+
+
+  h1 {
+    font-size: 6mm;
+  }
+
+  h2 {
+    font-size: 4mm;
+  }
+}
