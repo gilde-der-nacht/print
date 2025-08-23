@@ -21,13 +21,15 @@ export default function Home(): JSX.Element {
             class="half-column bold"
             style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 4rem 1rem;"
           >
-            <p>Snack</p>
-            <p style="text-align: right">2</p>
+            <p>
+              Abenteuergruppensnack
+            </p>
+            <p style="text-align: right">5</p>
+            <p>Pad Thai</p>
+            <p style="text-align: right">15</p>
+            <p>Risotto</p>
+            <p style="text-align: right">15</p>
             <p>Pilzrisotto</p>
-            <p style="text-align: right">15</p>
-            <p>Penne All'Arrabbiata</p>
-            <p style="text-align: right">15</p>
-            <p>Penne Pesto</p>
             <p style="text-align: right">15</p>
           </div>
           <img
@@ -55,14 +57,14 @@ export default function Home(): JSX.Element {
             class="half-column bold"
             style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 1rem;"
           >
+            <p>Hahnenwasser</p>
+            <p style="text-align: right">gratis</p>
             <p>Mineralwasser</p>
             <p style="text-align: right">3</p>
-            <p>Tee</p>
-            <p style="text-align: right">3</p>
-            <p>Kaffee</p>
+            <p>Tee / Kaffee</p>
             <p style="text-align: right">3</p>
             <p>Süssgetränk</p>
-            <p style="text-align: right">4</p>
+            <p style="text-align: right">5</p>
             <p>Bier</p>
             <p style="text-align: right">5</p>
           </div>

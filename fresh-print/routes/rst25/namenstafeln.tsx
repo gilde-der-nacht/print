@@ -93,7 +93,7 @@ function OnePage(props: { entries: Entry[] }): JSX.Element {
     <Page logo={false}>
       <div
         class="every-row every-column"
-        style="margin: auto; display: grid; grid-template-columns: repeat(2, 90mm); grid-template-rows: repeat(5, 54mm);"
+        style="margin: auto; display: grid; grid-template-columns: repeat(2, 72mm); grid-template-rows: repeat(5, 40mm);"
       >
         {props.entries.map((entry, i) => <Part key={i} entry={entry} />)}
       </div>

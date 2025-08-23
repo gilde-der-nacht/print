@@ -29,9 +29,19 @@ function Part(props: { n: number }): JSX.Element {
         <p class="checkbox reset big">Risotto</p>
         <p class="checkbox reset big">Pilzrisotto</p>
         <hr />
-        <div style="display: flex; gap: 1rem;">
-          <p class="checkbox reset">Mittag</p>
-          <p class="checkbox reset">Abend</p>
+        <div style="display: flex; gap: .25rem;">
+          <p style="border: 1px solid gray; padding: 0.25rem; font-size: smaller;">
+            Mittag
+          </p>
+          <p style="border: 1px solid gray; padding: 0.25rem; font-size: smaller;">
+            Abend
+          </p>
+          <p style="border: 1px solid gray; padding: 0.25rem; font-size: smaller;">
+            Samstag
+          </p>
+          <p style="border: 1px solid gray; padding: 0.25rem; font-size: smaller;">
+            Sonntag
+          </p>
         </div>
       </div>
     </div>
