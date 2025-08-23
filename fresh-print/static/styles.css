@@ -207,6 +207,10 @@ h6 {
 
 /* Food */
 
+.checkbox {
+  vertical-align: middle;
+}
+
 .checkbox::before {
   content: "";
   display: inline-block;
@@ -214,6 +218,11 @@ h6 {
   width: 1em;
   border: 1px solid black;
   margin-right: .3rem;
+}
+
+.checkbox.big::before {
+  height: 2em;
+  width: 2em;
 }
 
 /* Program */
