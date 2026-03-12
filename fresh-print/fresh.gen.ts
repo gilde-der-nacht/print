@@ -20,6 +20,20 @@ import * as $lst25_rollenspieltage from "./routes/lst25/rollenspieltage.tsx";
 import * as $lst25_wc from "./routes/lst25/wc.tsx";
 import * as $lst25_wegweiser from "./routes/lst25/wegweiser.tsx";
 import * as $lst25_willkommen from "./routes/lst25/willkommen.tsx";
+import * as $lst26_bestellzettel from "./routes/lst26/bestellzettel.tsx";
+import * as $lst26_discord from "./routes/lst26/discord.tsx";
+import * as $lst26_feedback from "./routes/lst26/feedback.tsx";
+import * as $lst26_haftungsausschluss from "./routes/lst26/haftungsausschluss.tsx";
+import * as $lst26_helferprotokoll from "./routes/lst26/helferprotokoll.tsx";
+import * as $lst26_index from "./routes/lst26/index.tsx";
+import * as $lst26_naechstesJahr from "./routes/lst26/naechstesJahr.tsx";
+import * as $lst26_namenstafeln from "./routes/lst26/namenstafeln.tsx";
+import * as $lst26_preisliste from "./routes/lst26/preisliste.tsx";
+import * as $lst26_programm from "./routes/lst26/programm.tsx";
+import * as $lst26_rollenspieltage from "./routes/lst26/rollenspieltage.tsx";
+import * as $lst26_wc from "./routes/lst26/wc.tsx";
+import * as $lst26_wegweiser from "./routes/lst26/wegweiser.tsx";
+import * as $lst26_willkommen from "./routes/lst26/willkommen.tsx";
 import * as $rst24_bestellzettel from "./routes/rst24/bestellzettel.tsx";
 import * as $rst24_discord from "./routes/rst24/discord.tsx";
 import * as $rst24_feedback from "./routes/rst24/feedback.tsx";
@@ -63,6 +77,20 @@ const manifest = {
     "./routes/lst25/wc.tsx": $lst25_wc,
     "./routes/lst25/wegweiser.tsx": $lst25_wegweiser,
     "./routes/lst25/willkommen.tsx": $lst25_willkommen,
+    "./routes/lst26/bestellzettel.tsx": $lst26_bestellzettel,
+    "./routes/lst26/discord.tsx": $lst26_discord,
+    "./routes/lst26/feedback.tsx": $lst26_feedback,
+    "./routes/lst26/haftungsausschluss.tsx": $lst26_haftungsausschluss,
+    "./routes/lst26/helferprotokoll.tsx": $lst26_helferprotokoll,
+    "./routes/lst26/index.tsx": $lst26_index,
+    "./routes/lst26/naechstesJahr.tsx": $lst26_naechstesJahr,
+    "./routes/lst26/namenstafeln.tsx": $lst26_namenstafeln,
+    "./routes/lst26/preisliste.tsx": $lst26_preisliste,
+    "./routes/lst26/programm.tsx": $lst26_programm,
+    "./routes/lst26/rollenspieltage.tsx": $lst26_rollenspieltage,
+    "./routes/lst26/wc.tsx": $lst26_wc,
+    "./routes/lst26/wegweiser.tsx": $lst26_wegweiser,
+    "./routes/lst26/willkommen.tsx": $lst26_willkommen,
     "./routes/rst24/bestellzettel.tsx": $rst24_bestellzettel,
     "./routes/rst24/discord.tsx": $rst24_discord,
     "./routes/rst24/feedback.tsx": $rst24_feedback,

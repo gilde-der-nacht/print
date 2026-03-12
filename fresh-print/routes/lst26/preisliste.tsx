@@ -1,0 +1,101 @@
+import type { JSX } from "preact";
+import { Head } from "$fresh/runtime.ts";
+import { Page } from "#/components/Page.tsx";
+import { Pages } from "#/components/Pages.tsx";
+
+export default function Home(): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>Preisliste</title>
+      </Head>
+      <Pages orientation="portrait">
+        <Page event="LST" year={2026}>
+          <div>
+            <h3>
+              Verpflegung
+            </h3>
+            <p>Preise in CHF</p>
+          </div>
+          <div
+            class="half-column bold"
+            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 2rem 1rem;"
+          >
+            <p>Snack</p>
+            <p style="text-align: right">2</p>
+            <p>
+              Chili Sin Carne
+              <br />
+              <em>
+                (klein, vegan)
+              </em>
+            </p>
+            <p style="text-align: right">4</p>
+            <p>
+              Chili Con Carne
+              <br />
+              <em>(klein)</em>
+            </p>
+            <p style="text-align: right">5</p>
+
+            <p>
+              Spinatlasagne
+              <br />
+              <em>
+                (vegetarisch)
+              </em>
+            </p>
+            <p style="text-align: right">13</p>
+
+            <p>Lasagne</p>
+            <p style="text-align: right">15</p>
+          </div>
+          <img
+            src="/Twint-QR.jpg"
+            style="grid-row-start: 4; grid-column: 18 / span 6;"
+          />
+          <div style="grid-row-start: 17; grid-column: 2 / span 12;">
+            <p>
+              Lasagnen können auf folgende Zeitfenster vorbestellt werden:
+            </p>
+            <ul>
+              <li>12 - 13 Uhr</li>
+              <li>18 - 19 Uhr</li>
+            </ul>
+          </div>
+        </Page>
+        <Page logo={false}>
+          <div>
+            <h3>
+              Verpflegung
+            </h3>
+            <p>Preise in CHF</p>
+          </div>
+          <div
+            class="half-column bold"
+            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 1rem;"
+          >
+            <p>Mineralwasser</p>
+            <p style="text-align: right">3</p>
+            <p>Tee</p>
+            <p style="text-align: right">3</p>
+            <p>Kaffee</p>
+            <p style="text-align: right">3</p>
+            <p>Süssgetränk</p>
+            <p style="text-align: right">4</p>
+            <p>Bier</p>
+            <p style="text-align: right">5</p>
+          </div>
+          <img
+            src="/Twint-QR.jpg"
+            style="grid-row-start: 4; grid-column: 18 / span 6;"
+          />
+          <img
+            src="/akzent.png"
+            style="grid-row-start: -13; grid-column: 2 / -2; z-index: 1;"
+          />
+        </Page>
+      </Pages>
+    </>
+  );
+}

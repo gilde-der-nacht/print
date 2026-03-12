@@ -2,7 +2,7 @@ import type { JSX } from "preact";
 import { RstLogo } from "#/components/rst-logo.tsx";
 import { LstLogo } from "#/components/lst-logo.tsx";
 
-type Year = 2024 | 2025;
+type Year = 2024 | 2025 | 2026;
 
 export type EventMetadata =
   | {
@@ -47,6 +47,17 @@ export function Logo(
           </>
         ),
         date: "23. + 24. August 2025",
+      };
+    }
+
+    if (props.event === "LST" && props.year === 2026) {
+      return {
+        name: (
+          <>
+            Luzerner <br /> Spieltage
+          </>
+        ),
+        date: "14. + 15. März 2026",
       };
     }
 
