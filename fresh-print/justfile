@@ -1,0 +1,8 @@
+default:
+    @just --list
+
+start:
+    deno task start
+
+update:
+    deno update --latest
