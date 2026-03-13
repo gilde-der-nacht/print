@@ -209,6 +209,9 @@ h6 {
 
 .checkbox {
   vertical-align: middle;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
 }
 
 .checkbox::before {

@@ -25,40 +25,36 @@ const ok = [
 ];
 
 const helper = [
-  "Andrea",
-  "Mario",
-  "Fadri",
-  "Tobias",
-  "Luciano",
-  "Jeremy",
-  "Christian",
-  "Aneska",
-  "Sacha",
-  "Michaela",
   "Kuki",
-  "Nadja",
-  "Raphael",
-  "Alexander",
-  "Jonas",
-  "Peter",
-  "Richard",
-  "Crislaine",
-  "Penélope",
-  "Sofi",
-  "René",
-  "Juri",
-  "Patrick",
-  "Matthias",
-  "Armin",
-  "Tobias",
-  "Basil",
-  "Simeon",
+  "Harald",
+  "Marina",
+  "Andi",
+  "Luciano",
   "Sandro",
-  "Alessandro",
-  "Demian",
-  "Marco",
-  "Fabian",
+  "Patrick",
+  "Kurt",
+  "Matthias",
+  "Christian",
+  "Peter",
+  "Tobias",
+  "Sacha",
   "Renato",
+  "Armin",
+  "Jeremy",
+  "René",
+  "Fabian",
+  "Raphael",
+  "Marco",
+  "Jonathan",
+  "Matthias",
+  "Heinz",
+  "Henrik Amalia",
+  "Jeremy",
+  "Juri",
+  "Anna",
+  "Jonas",
+  "Lionel",
+].concat([
   "",
   "",
   "",
@@ -67,7 +63,13 @@ const helper = [
   "",
   "",
   "",
-];
+  "",
+  "",
+  "",
+]);
+
+const HEIGHT = "42mm";
+const WIDTH = "75mm";
 
 const all = ok.map((name) => ({ name, ok: true })).concat(
   helper.map((name) => ({ name, ok: false })),
@@ -84,7 +86,7 @@ export const handler: Handlers<Data> = {
 function Part(props: { entry: Entry }): JSX.Element {
   return (
     <div style="padding: 30px 25px; border: 1px solid lightgray;">
-      <h3>{props.entry.name}</h3>
+      <h3>{props.entry.name} &nbsp;</h3>
       <p style="color: gray; margin-block-start: 10px;">
         {props.entry.ok ? "Organisationskomitee" : "Helfer:in"}
       </p>
@@ -97,16 +99,16 @@ function OnePage(props: { entries: Entry[] }): JSX.Element {
     <Page logo={false}>
       <div
         class="every-row every-column"
-        style="margin: auto; display: grid; grid-template-columns: repeat(2, 90mm); grid-template-rows: repeat(5, 54mm);"
+        style={`margin: auto; display: grid; grid-template-columns: repeat(2, ${WIDTH}); grid-template-rows: repeat(6, ${HEIGHT});`}
       >
-        {props.entries.map((entry) => <Part entry={entry} />)}
+        {props.entries.map((entry) => <Part entry={entry} key={entry.name} />)}
       </div>
     </Page>
   );
 }
 
 export default function Home({ data }: PageProps<Data>): JSX.Element {
-  const entriesPerPage = 10;
+  const entriesPerPage = 12;
   const numOfPages = Math.ceil(all.length / entriesPerPage);
   const pagesRange = [...Array(numOfPages).keys()];
   return (

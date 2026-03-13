@@ -23,6 +23,7 @@ import * as $lst25_willkommen from "./routes/lst25/willkommen.tsx";
 import * as $lst26_bestellzettel from "./routes/lst26/bestellzettel.tsx";
 import * as $lst26_discord from "./routes/lst26/discord.tsx";
 import * as $lst26_feedback from "./routes/lst26/feedback.tsx";
+import * as $lst26_flohmarktprotokoll from "./routes/lst26/flohmarktprotokoll.tsx";
 import * as $lst26_haftungsausschluss from "./routes/lst26/haftungsausschluss.tsx";
 import * as $lst26_helferprotokoll from "./routes/lst26/helferprotokoll.tsx";
 import * as $lst26_index from "./routes/lst26/index.tsx";
@@ -80,6 +81,7 @@ const manifest = {
     "./routes/lst26/bestellzettel.tsx": $lst26_bestellzettel,
     "./routes/lst26/discord.tsx": $lst26_discord,
     "./routes/lst26/feedback.tsx": $lst26_feedback,
+    "./routes/lst26/flohmarktprotokoll.tsx": $lst26_flohmarktprotokoll,
     "./routes/lst26/haftungsausschluss.tsx": $lst26_haftungsausschluss,
     "./routes/lst26/helferprotokoll.tsx": $lst26_helferprotokoll,
     "./routes/lst26/index.tsx": $lst26_index,

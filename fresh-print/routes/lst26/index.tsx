@@ -20,6 +20,9 @@ export default function Home(): JSX.Element {
           <a href="/lst26/feedback">Feedback</a>
         </li>
         <li>
+          <a href="/lst26/flohmarktprotokoll">Flohmarktprotokoll</a>
+        </li>
+        <li>
           <a href="/lst26/haftungsausschluss">Haftungsausschluss</a>
         </li>
         <li>
@@ -36,9 +39,6 @@ export default function Home(): JSX.Element {
         </li>
         <li>
           <a href="/lst26/programm">Programm</a>
-        </li>
-        <li>
-          <a href="/lst26/rollenspiele">Rollenspiele</a>
         </li>
         <li>
           <a href="/lst26/rollenspieltage">Rollenspieltage</a>
