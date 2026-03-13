@@ -3,6 +3,18 @@ import { Head } from "$fresh/runtime.ts";
 import { Page } from "#/components/Page.tsx";
 import { Pages } from "#/components/Pages.tsx";
 
+const menus = [
+  { label: "Lasagne", price: 16, comment: "enthält Nüsse" },
+  { label: "Spinatlasagne", price: 15, comment: "vegetarisch, enthält Nüsse" },
+  { label: "Chili Con Carne", price: 14 },
+  { label: "Mango Cocos Chili", price: 13, comment: "vegan" },
+  { label: "Chili Con Carne", price: 10, comment: "klein" },
+  { label: "Mango Cocos Chili", price: 9, comment: "klein, vegan" },
+  { label: "Avocado-Cremesuppe", price: 8, comment: "mit Speck" },
+  { label: "Avocado-Cremesuppe", price: 7, comment: "vegan" },
+  { label: "Snack", price: 2 },
+];
+
 export default function Home(): JSX.Element {
   return (
     <>
@@ -11,6 +23,28 @@ export default function Home(): JSX.Element {
       </Head>
       <Pages orientation="portrait">
         <Page event="LST" year={2026}>
+          <style>
+            {`
+              .price {
+                text-align: right;
+              }
+
+              .comment {
+                font-size: 0.7em;
+                line-height: 0.5lh;
+                font-weight: normal;
+                display: block;
+              }
+
+              .small {
+                display: grid;
+              }
+
+              .small > * {
+                font-family: monospace;
+              }
+            `}
+          </style>
           <div>
             <h3>
               Verpflegung
@@ -18,50 +52,49 @@ export default function Home(): JSX.Element {
             <p>Preise in CHF</p>
           </div>
           <div
-            class="half-column bold"
-            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 2rem 1rem;"
+            class="bold"
+            style="grid-column-end: span 13; font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 1.25rem 1rem;"
           >
-            <p>Snack</p>
-            <p style="text-align: right">2</p>
-            <p>
-              Chili Sin Carne
-              <br />
-              <em>
-                (klein, vegan)
-              </em>
-            </p>
-            <p style="text-align: right">4</p>
-            <p>
-              Chili Con Carne
-              <br />
-              <em>(klein)</em>
-            </p>
-            <p style="text-align: right">5</p>
-
-            <p>
-              Spinatlasagne
-              <br />
-              <em>
-                (vegetarisch)
-              </em>
-            </p>
-            <p style="text-align: right">13</p>
-
-            <p>Lasagne</p>
-            <p style="text-align: right">15</p>
+            {menus.map((menu) => (
+              <>
+                <p>
+                  {menu.label}
+                  {menu.comment !== undefined
+                    ? (
+                      <em class="comment">
+                        ({menu.comment})
+                      </em>
+                    )
+                    : null}
+                </p>
+                <p class="price">{menu.price}</p>
+              </>
+            ))}
           </div>
+          {
+            /*
           <img
             src="/Twint-QR.jpg"
-            style="grid-row-start: 4; grid-column: 18 / span 6;"
+            style="grid-row-start: 10; grid-column: 18 / span 6;"
           />
-          <div style="grid-row-start: 17; grid-column: 2 / span 12;">
+        */
+          }
+          <div style="grid-row-start: 4; grid-column: 16 / span 7;">
             <p>
-              Lasagnen können auf folgende Zeitfenster vorbestellt werden:
+              Warme Speisen können auf folgende Zeitpunkte vorbestellt werden:
             </p>
             <ul>
-              <li>12 - 13 Uhr</li>
-              <li>18 - 19 Uhr</li>
+              <li>12 oder 13 Uhr</li>
+              <li>18 oder 19 Uhr</li>
             </ul>
+          </div>
+          <div
+            style="grid-row-start: 22; grid-column: 2 / span 12;"
+            class="small"
+          >
+            <p>1 Gilden-Jeton klein: Gratis Getränk</p>
+            <p>1 Gilden-Jeton gross: Gratis Verpflegung</p>
+            <p>4 Gilden-Jeton klein: Gratis Verpflegung</p>
           </div>
         </Page>
         <Page logo={false}>
@@ -72,19 +105,19 @@ export default function Home(): JSX.Element {
             <p>Preise in CHF</p>
           </div>
           <div
-            class="half-column bold"
-            style="font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 1rem;"
+            class="bold"
+            style="grid-column-end: span 13; font-size: 30px; grid-row: 4 / span 1; display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 1rem;"
           >
             <p>Mineralwasser</p>
-            <p style="text-align: right">3</p>
+            <p class="price">3</p>
             <p>Tee</p>
-            <p style="text-align: right">3</p>
+            <p class="price">3</p>
             <p>Kaffee</p>
-            <p style="text-align: right">3</p>
+            <p class="price">3</p>
             <p>Süssgetränk</p>
-            <p style="text-align: right">4</p>
+            <p class="price">4</p>
             <p>Bier</p>
-            <p style="text-align: right">5</p>
+            <p class="price">5</p>
           </div>
           <img
             src="/Twint-QR.jpg"
