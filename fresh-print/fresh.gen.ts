@@ -55,6 +55,17 @@ import * as $rst25_preisliste from "./routes/rst25/preisliste.tsx";
 import * as $rst25_programm from "./routes/rst25/programm.tsx";
 import * as $rst25_wc from "./routes/rst25/wc.tsx";
 import * as $rst25_willkommen from "./routes/rst25/willkommen.tsx";
+import * as $rst26_bestellzettel from "./routes/rst26/bestellzettel.tsx";
+import * as $rst26_coc from "./routes/rst26/coc.tsx";
+import * as $rst26_discord from "./routes/rst26/discord.tsx";
+import * as $rst26_feedback from "./routes/rst26/feedback.tsx";
+import * as $rst26_index from "./routes/rst26/index.tsx";
+import * as $rst26_naechstesJahr from "./routes/rst26/naechstesJahr.tsx";
+import * as $rst26_namenstafeln from "./routes/rst26/namenstafeln.tsx";
+import * as $rst26_preisliste from "./routes/rst26/preisliste.tsx";
+import * as $rst26_programm from "./routes/rst26/programm.tsx";
+import * as $rst26_wc from "./routes/rst26/wc.tsx";
+import * as $rst26_willkommen from "./routes/rst26/willkommen.tsx";
 
 import type { Manifest } from "$fresh/server.ts";
 
@@ -113,6 +124,17 @@ const manifest = {
     "./routes/rst25/programm.tsx": $rst25_programm,
     "./routes/rst25/wc.tsx": $rst25_wc,
     "./routes/rst25/willkommen.tsx": $rst25_willkommen,
+    "./routes/rst26/bestellzettel.tsx": $rst26_bestellzettel,
+    "./routes/rst26/coc.tsx": $rst26_coc,
+    "./routes/rst26/discord.tsx": $rst26_discord,
+    "./routes/rst26/feedback.tsx": $rst26_feedback,
+    "./routes/rst26/index.tsx": $rst26_index,
+    "./routes/rst26/naechstesJahr.tsx": $rst26_naechstesJahr,
+    "./routes/rst26/namenstafeln.tsx": $rst26_namenstafeln,
+    "./routes/rst26/preisliste.tsx": $rst26_preisliste,
+    "./routes/rst26/programm.tsx": $rst26_programm,
+    "./routes/rst26/wc.tsx": $rst26_wc,
+    "./routes/rst26/willkommen.tsx": $rst26_willkommen,
   },
   islands: {},
   baseUrl: import.meta.url,

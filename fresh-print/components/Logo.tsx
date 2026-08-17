@@ -61,6 +61,17 @@ export function Logo(
       };
     }
 
+    if (props.event === "RST" && props.year === 2026) {
+      return {
+        name: (
+          <>
+            Luzerner <br /> Rollenspieltage
+          </>
+        ),
+        date: "22. + 23. August 2026",
+      };
+    }
+
     throw new Error(`Wrong or missing event props: ${JSON.stringify(props)}}`);
   })();
 
