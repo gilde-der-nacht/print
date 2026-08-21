@@ -68,6 +68,8 @@ type GameRound = {
   slot: Slot;
   tagNames: string[];
   players: { name: string }[];
+  page: number;
+  pageTotal: number;
 };
 
 type PlayerCount = {
@@ -84,8 +86,40 @@ type Slot = {
 type DayEnum = "SATURDAY" | "SUNDAY" | "EMPTY";
 
 type Data = {
-  saturday: { [hour: string]: GameRound[] };
-  sunday: { [hour: string]: GameRound[] };
+  publicEntries: {
+    uuid: string;
+    myEntry: boolean;
+    title: string;
+    system: string;
+    organizer: string;
+    shortDescription: string;
+    longDescription: string;
+    participation: {
+      seats: {
+        max: number;
+      };
+      reserved: {
+        name: string;
+      }[];
+    };
+    timeSlot: {
+      uuid: string;
+      slot: {
+        start: {
+          day: string;
+          time: string;
+        };
+        duration: { hours: number };
+      };
+    };
+    tagNames: (string)[];
+    language: "Deutsch" | "Englisch";
+    links: {
+      label: string;
+      link: string;
+    }[];
+    isClosed: boolean;
+  }[];
 };
 
 const emptyEntry = {
@@ -104,6 +138,8 @@ const emptyEntry = {
   },
   tagNames: [],
   players: [],
+  page: 1,
+  pageTotal: 1,
 } satisfies GameRound;
 
 export const handler: Handlers<GameRound[]> = {
@@ -129,16 +165,17 @@ export const handler: Handlers<GameRound[]> = {
         },
         tagNames: ["ab6Jahren"],
         players: [{ name: "First Player" }, { name: "Second Player" }],
+        page: 1,
+        pageTotal: 1,
       }, { ...emptyEntry }]);
     }
     const response = await fetch(
-      "https://elysium.gildedernacht.ch/rst25/program/data?secret=" + secret,
+      "https://elysium.gildedernacht.ch/rst26/program?secret=" + secret,
     );
     const data = await response.json() as Data;
     console.log(data);
     const rounds = [
-      ...Object.values(data.saturday),
-      ...Object.values(data.sunday),
+      ...data.publicEntries,
       { ...emptyEntry },
       { ...emptyEntry },
       { ...emptyEntry },
@@ -147,18 +184,70 @@ export const handler: Handlers<GameRound[]> = {
       { ...emptyEntry },
       { ...emptyEntry },
       { ...emptyEntry },
-    ].flat().reduce<GameRound[]>((acc, curr) => {
-      if (curr.playerCount.max > 6) {
-        const newCurr = {
-          ...curr,
-          playerCount: { ...curr.playerCount, max: 6 },
-        } satisfies GameRound;
-        return [...acc, newCurr, { ...newCurr, players: [] }];
+    ].flat().reduce<GameRound[]>((acc, curr): GameRound[] => {
+      const currentGameRound = "playerCount" in curr ? curr : ({
+        master: { name: curr.organizer },
+        playerCount: {
+          min: 1,
+          max: curr.participation.seats.max,
+        },
+        players: curr.participation.reserved,
+        system: curr.system,
+        tagNames: curr.tagNames,
+        title: curr.title,
+        uuid: curr.uuid,
+        slot: {
+          day: curr.timeSlot.slot.start.day === "2026-08-22"
+            ? "SATURDAY"
+            : "SUNDAY",
+          from: Number(curr.timeSlot.slot.start.time.substring(0, 2)),
+          to: Number(curr.timeSlot.slot.start.time.substring(0, 2)) +
+            curr.timeSlot.slot.duration.hours,
+        },
+        page: 1,
+        pageTotal: Math.ceil(curr.participation.seats.max / 6),
+      } satisfies GameRound);
+
+      if (currentGameRound.playerCount.max > 6) {
+        let remaining = currentGameRound.playerCount.max;
+        const pages: GameRound[] = [];
+        const players: { name: string }[] = currentGameRound.players;
+
+        while (remaining !== 0) {
+          pages.push(
+            {
+              ...currentGameRound,
+              playerCount: {
+                ...currentGameRound.playerCount,
+                max: remaining > 6 ? 6 : remaining,
+              },
+              players: players.slice(pages.length * 6, pages.length * 6 + 6),
+              page: pages.length + 1,
+            } satisfies GameRound,
+          );
+          remaining = remaining > 6 ? remaining - 6 : 0;
+        }
+        return [
+          ...acc,
+          ...pages,
+        ];
       }
-      return [...acc, curr];
+
+      return [...acc, currentGameRound];
     }, []);
 
-    return ctx.render(rounds);
+    return ctx.render(rounds.toSorted((a, b) => {
+      if (a.slot.day !== b.slot.day) {
+        if (a.slot.day === "SATURDAY") {
+          return -1;
+        }
+        return 1;
+      }
+      if (a.slot.from !== b.slot.from) {
+        return a.slot.from - b.slot.from;
+      }
+      return a.slot.to - b.slot.to;
+    }));
   },
 };
 
@@ -175,10 +264,17 @@ function ProgramSlot(props: { entry: GameRound }): JSX.Element {
       <div style="grid-column-end: 18;">
         {entry.title === null ? <h1>{entry.system}</h1> : (
           <>
-            <h5>
-              <em>{entry.system}</em>
-            </h5>
-            <h3>{entry.title}</h3>
+            {entry.system !== entry.title
+              ? (
+                <h5>
+                  <em>{entry.system}</em>
+                </h5>
+              )
+              : null}
+            <h3>
+              {entry.title}{" "}
+              {entry.pageTotal > 1 ? `(${entry.page}/${entry.pageTotal})` : ""}
+            </h3>
           </>
         )}
         <p>
@@ -214,9 +310,7 @@ function ProgramSlot(props: { entry: GameRound }): JSX.Element {
       <small style="grid-row-start: 22;">
         Kategorien:{" "}
         <em>
-          {entry.tagNames.map((tag) =>
-            (gameTags.find((t) => t.name === tag))?.label ?? ""
-          ).join(
+          {entry.tagNames.join(
             ", ",
           )}
         </em>
